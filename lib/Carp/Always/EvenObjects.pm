@@ -9,7 +9,11 @@ $VERSION = eval $VERSION;
 use Devel::Confess ();
 our @ISA = qw(Devel::Confess);
 
+my %OldNoTrace = our %NoTrace;
 *NoTrace = \%Devel::Confess::NoTrace;
+for my $mod (keys %OldNoTrace) {
+  $NoTrace{$mod} ||= $OldNoTrace{$mod};
+}
 
 1;
 __END__
