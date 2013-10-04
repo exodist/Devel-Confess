@@ -2,7 +2,7 @@ package Carp::Always::EvenObjects::Hacks;
 use strict;
 use warnings FATAL => 'all';
 
-our $VERSION = '0.002002';
+our $VERSION = '0.003000';
 $VERSION = eval $VERSION;
 
 use Devel::Confess::Hacks ();
